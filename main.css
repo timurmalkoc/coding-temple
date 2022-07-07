@@ -1,0 +1,156 @@
+body, html{
+    height: 100%;
+    margin: 0px;
+}
+
+
+nav li{
+    display: inline;
+    margin: 20px;
+}
+
+nav ul{
+    background-color: black;
+    margin: 0px;
+    list-style-type: none;
+    width: 100%;
+    padding: 20px;
+
+}
+
+nav{
+    display: block;
+    color: aliceblue;
+
+}
+
+nav a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: coral;
+}
+
+.hero-image{
+    background-image:linear-gradient(rgba(137, 197, 247, .5),rgba(0,0,0,1)), url("https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?cs=srgb&dl=pexels-pixabay-210243.jpg&fm=jpg");
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-text{
+    color:white;
+    text-align: center;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#main{
+    width: 75%;
+    float: left;
+    height: 100%;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#side{
+    width: 20%;
+    float: right;
+    height: 100%;
+    padding: 20px;
+}
+
+#profile-image{
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid lightcoral;
+
+}
+
+#profile{
+    text-align: center;
+}
+
+.side-articles ul{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+#profile h2{
+    display: inline;
+}
+
+#profile-details{
+    margin-right: 30px;
+    text-align: center;
+}
+
+.side-articles, .main-articles{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.side-articles{
+    background-color: antiquewhite;
+    text-align: center;
+
+}
+.main-articles{
+    background-color: antiquewhite;
+
+}
+
+.side-articles{
+    background-color: beige;
+    text-align: center;
+}
+
+.main-articles{
+    background-color: antiquewhite;
+}
+
+form{
+    margin: 20%;
+}
+
+textarea, input, button{
+    background-color: brown;
+    color: aliceblue;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.side-articles h1{
+    color: brown;
+    margin-bottom: 20px;
+}
+
+footer{
+    bottom: 0px;
+    width: 100%;
+    background-color: black;
+    height: 5vh;
+    margin-top: 0px;
+}
+
+footer div{
+    text-align: center;
+    color: aliceblue;
+}
+
+footer hr{
+    margin:0px;
+    height: 12px;
+    border: 0px;
+    box-shadow: inset 0 12px 12px -12px wheat
+}
+
+main{
+    overflow: auto;
+}
