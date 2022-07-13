@@ -6,15 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        // for toggle small divices
+
+        $(function(){
+            $(".toggle").on("click",function(){
+                if($(".item").hasClass("active")){
+                    $(".item").removeClass("active");
+                }
+                else{
+                    $(".item").addClass("active");
+                }
+            })
+        });
+
+    </script>
+
 </head>
 <body>
     <nav>
-        <ul>
-            <li>Timur Portfolio</li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="#">link 2</a></li>
-            <li><a href="page3.html">link 3</a></li>
-            <li><a href="#">link 4</a></li>
+        <ul class="menu">
+            <li class="logo"><a href="#">Timur Portfolio</a></li>
+            <li class="item"><a href="gallery.html">Gallery</a></li>
+            <li class="item"><a href="#">link 2</a></li>
+            <li class="item"><a href="page3.html">link 3</a></li>
+            <li class="item"><a href="#">link 4</a></li>
+            <li class="item button"><a href="#">Login</a></li>
+            <li class="item button secondary"><a href="#">Sign Up</a></li>
+            <li class="toggle"><span class="bars"></span></li>
         </ul>
     </nav>
     <div class="hero-image">

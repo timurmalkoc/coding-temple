@@ -1,27 +1,26 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 body, html{
     height: 100%;
     margin: 0px;
 }
 
-
-nav li{
-    display: inline;
-    margin: 20px;
-}
-
-nav ul{
-    background-color: black;
-    margin: 0px;
-    list-style-type: none;
-    width: 100%;
-    padding: 20px;
-
+body{
+    font-family: sans-serif;
 }
 
 nav{
     display: block;
+    padding: 5px 20px;
     color: aliceblue;
+    background-color: black;
+}
 
+nav ul{
+    list-style-type: none;
 }
 
 nav a{
@@ -31,6 +30,146 @@ nav a{
 
 nav a:hover{
     color: coral;
+    text-decoration: underline;
+}
+
+.menu li{
+    font-size: 16px;
+    padding: 15px 5px;
+}
+.menu li a{
+    display: block;
+}
+.logo a{
+    font-size: 20px;
+}
+.button.secondary{
+    border-bottom: 1px coral solid;
+}
+
+/*     Mobile menu     */
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.toggle{
+    order: 1;
+}
+.item.button{
+    order: 2;
+}
+.item{
+    width: 100%;
+    text-align:center;
+    order: 3;
+    display: none;
+}
+.item.active{
+    display: block;
+}
+
+
+/*  Tablet Menu */
+
+@media all and (min-width:468px) {
+    .menu{
+        justify-content: center;
+    }
+    .logo{
+        flex: 1;
+    }
+    .item.button{
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toggle{
+        order: 2;
+    }
+    .button.secondary{
+        border: 0;
+    }
+
+    .button a{
+        text-decoration: none;
+        padding: 7px 15px;
+        background-color: teal;
+        border: 1px solid #006d6d;
+        border-radius: 50em;
+    }
+
+    .button.secondary a{
+        background-color: transparent;
+    }
+    .button a:hover{
+        transition: all .25;
+    }
+
+    .button:not(.secondary) a:hover{
+        background-color: #006d6d;
+        border-color: #005959;
+    }
+}
+
+@media all and (min-width: 768px){
+    .item{
+        display: block;
+        width: auto;
+    }
+    .toggle{
+        display: none;
+    }
+    .logo{
+        order: 0;
+    }
+    .item{
+        order: 1;
+    }
+    .button{
+        order: 2;
+    }
+
+    .menu li{
+        padding: 15px 10px;
+    }
+
+    .menu li.button{
+        padding-right: 0;
+    }
+
+}
+
+
+
+
+
+.toggle{
+    cursor: pointer;
+}
+.bars{
+    background-color: gray;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+}
+
+.bars::before,.bars::after{
+    background-color: gray;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 18px;
+}
+.bars::before{
+    top: 5px;
+}
+
+.bars::after{
+    top: -5px;
 }
 
 .hero-image{
